@@ -15,12 +15,15 @@
         Accept: 'application/vnd.github.v3.raw'
       },
       type: 'get',
-      url: 'https://api.github.com/users/<%= theme.about.github_username %>/repos',
+      // url: 'https://api.github.com/users/<%= theme.about.github_username %>/repos',
+      url: 'https://api.github.com/search/repositories?q=user:<%= theme.about.github_username %>&sort=stars',
       success: function (data) {
-        var repos = data.sort(function(a, b) {
-          return (b.stargazers_count - a.stargazers_count)
-        }).slice(0, 6)
-        var cardHtml = repos.map(function(item) {
+        var repos = data["items"];
+        var filtered = repos.filter(function(v){
+          return v.stargazers_count > 1;
+        });
+        filtered = filtered.slice(0, 12);
+        var cardHtml = filtered.map(function(item) {
           var description = item.description || ""
           if (description.replace(/[\u0391-\uFFE5]/g, "aa").length > 72) {
             description = description.slice(0, 72) + '...'
