@@ -44,7 +44,7 @@ baidu_id:
 about: 
   banner: /assets/about_bg.png
   avatar: /assets/icon_about.jpg
-  description: An iOS Developer.
+  # description: An iOS Developer.
   # Links
   # weibo_username: yanm1ng
   # twitter_username: yanm1ng

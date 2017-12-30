@@ -24,7 +24,7 @@
       $('#article-banner').children().css(fade)
     }
     if (about) {
-      $('.author').children().css(fade)
+      $('.author-content').children().css(fade)
     }
     app.css(fade)
   })
