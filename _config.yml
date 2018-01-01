@@ -8,9 +8,10 @@ excerpt_link: Read more
 menu:
  Home: /
  Archives: /archives/
+ Tags: /tags/
  Projects: /project/
  About: /about/
-#  Tags: /tags/
+ 
 
 # highlight
 highlight:
@@ -42,7 +43,7 @@ gitment_oauth_secret: 47471beab9dc3898e0310556a7b239db624fe919
 baidu_id: 
 
 about: 
-  banner: /assets/about_bg.png
+  banner: /assets/about_bg.jpg
   avatar: /assets/icon_about.jpg
   # description: An iOS Developer.
   # Links
