@@ -3,7 +3,11 @@
   <p class="post-date">开源项目</p>
 </div>
 <main class="app-body project-app">
-  <div class="card-container" id="all-project"></div>
+  <div class="card-container" id="all-project">
+      <div class="loading">
+          <img src="/css/images/loadcat.gif" alt=""></img>
+      </div>
+  </div>
 </main>
 <script>
   (function() {
@@ -47,6 +51,10 @@
           var name = $(this).data('name');
           $(this).geopattern(name);
         })
+
+        $('.loading').css({
+        'display': 'none'
+      })
       }
     });
   })()
