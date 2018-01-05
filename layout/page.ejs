@@ -8,6 +8,12 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
+
+      <% if (page.author && page.author.length) { %>
+        <div class="author">
+        作者 : <%- page.author %> 。
+        </div>
+      <% } %>
     <section class="markdown-content"><%- page.content %></section>
     <!-- Tags START -->
     <% if (page.tags && page.tags.length) { %>
@@ -16,7 +22,6 @@
       </div>
     <% } %>
     <!-- Tags END -->
-    
     <!-- 打赏 START -->
     <% if (theme.donate) { %>
       <div class="money-like">
@@ -59,13 +64,11 @@
     <% } %>
 
     <!-- Post Nav START -->
-    <% if(theme.postnav) %>
+    <% if( theme.postnav ){ %>
     <div class="postnav">
         <%- partial('_partial/postnav') %>
     </div>
     <% } %>
-    
-    <!-- Post Nav END -->
 
   </article>
   <!-- Article END -->
