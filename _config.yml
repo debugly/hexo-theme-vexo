@@ -42,6 +42,9 @@ gitment_oauth_secret: 47471beab9dc3898e0310556a7b239db624fe919
 
 baidu_id: 
 
+# postnav;是否显示前后文章
+postnav: true
+
 about: 
   banner: /assets/about_bg.jpg
   avatar: /assets/icon_about.jpg

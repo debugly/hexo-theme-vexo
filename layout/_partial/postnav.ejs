@@ -1,0 +1,12 @@
+<% if(page.next) { %>
+    <div>
+        <span>上一篇 :</span>
+        <a href="<%- url_for(page.next.path) %>"><%- page.next.title %></a>
+      </div>
+  <% } %> 
+  <% if(page.prev) { %>
+    <div>
+        <span>下一篇 : </span>
+        <a href="<%- url_for(page.prev.path) %>"><%- page.prev.title %></a>
+    </div>
+  <% } %> 

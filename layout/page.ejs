@@ -12,11 +12,11 @@
     <!-- Tags START -->
     <% if (page.tags && page.tags.length) { %>
       <div class="tags">
-        <span><i class="fa fa-tags"></i> Tags:</span>
         <%- partial('_partial/tag', { tags: page.tags }) %>
       </div>
     <% } %>
     <!-- Tags END -->
+    
     <!-- 打赏 START -->
     <% if (theme.donate) { %>
       <div class="money-like">
@@ -57,6 +57,16 @@
     <% } else { %>
       <!-- No Comment -->
     <% } %>
+
+    <!-- Post Nav START -->
+    <% if(theme.postnav) %>
+    <div class="postnav">
+        <%- partial('_partial/postnav') %>
+    </div>
+    <% } %>
+    
+    <!-- Post Nav END -->
+
   </article>
   <!-- Article END -->
   <!-- Catalog START -->
