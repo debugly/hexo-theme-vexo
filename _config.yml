@@ -46,12 +46,6 @@ baidu_id:
 postnav: true
 
 about: 
-  banner: /assets/about_bg.jpg
-  avatar: /assets/icon_about.jpg
-  # description: An iOS Developer.
-  # Links
-  # weibo_username: yanm1ng
-  # twitter_username: yanm1ng
+  banner: /css/images/about_bg.jpg
+  avatar: /css/images/icon_about.jpg
   github_username: debugly
-  # zhihu_username: yummy1121
-  # douban_username: yanm1ng
