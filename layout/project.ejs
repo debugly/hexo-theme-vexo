@@ -47,6 +47,10 @@
           )
         }).join('')
         $('#all-project').html(cardHtml)
+        $('#all-project').css({
+          'transform': 'translateY(-15px)',
+          'transition': 'all 1.7s'
+        })
         $('.card-header').each(function() {
           var name = $(this).data('name');
           $(this).geopattern(name);
@@ -54,7 +58,7 @@
 
         $('.loading').css({
         'display': 'none'
-      })
+        })
       }
     });
   })()
