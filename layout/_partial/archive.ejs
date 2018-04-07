@@ -1,14 +1,31 @@
-<section class="time-section">
-  <h1 class="section-year">
-    <%= year %>
-  </h1>
-  <div class="section-list">
-    <% posts.sort((l, r) => r.date - l.date) %>
-    <% posts.forEach(post => { %>
-      <div class="section-list-item">
-        <a href="<%= url_for(post.path) %>" class="archive-title"><%= post.title %></a>
-        <p class="archive-date"><%-date(post.date, "MM-DD")%></p>
-      </div>
-    <% }) %>
-  </div>
-</section>
+
+<div class="cd-timeline-block">
+    <div class="cd-timeline-year">
+      <!-- <img src="/css/images/cd-icon-picture.svg" alt="Picture"> -->
+      <span><%= year %></span>
+    </div><!-- cd-timeline-img -->
+  
+    <div class="cd-year-content">
+      <h2><%= year %>年写了<%= posts.length %>篇博客 ↓</h2>
+    </div> <!-- cd-timeline-content -->
+  </div> <!-- cd-timeline-block -->
+
+<% posts.sort((l, r) => r.date - l.date) %>
+<% posts.forEach(post => { %>
+  <div class="cd-timeline-block">
+    <div class="cd-timeline-img cd-picture">
+      <img src="/css/images/cd-icon-picture.svg" alt="Picture">
+    </div><!-- cd-timeline-img -->
+  
+    <div class="cd-timeline-content">
+      <h2><%= post.title %></h2>
+      <p> <% if (post.excerpt) { %>
+        <%- truncate(strip_html(post.excerpt), { length: 120, omission: ' ...' }) %>
+      <% } else { %>
+        <%- truncate(strip_html(post.content), { length: 120, omission: ' ...' }) %>
+      <% } %></p>
+      <a href="<%= url_for(post.path) %>" class="cd-read-more">阅读更多</a>
+      <span class="cd-date"><%-date(post.date, "MM-DD")%></span>
+    </div> <!-- cd-timeline-content -->
+  </div> <!-- cd-timeline-block -->
+<% }) %>

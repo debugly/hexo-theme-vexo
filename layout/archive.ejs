@@ -4,7 +4,8 @@
   <p class="post-date">归档文章(<%= site.posts.length %>)</p>
 </div>
 <main class="app-body" id="archives">
-  <% let years = {}; %>
+  <section id="cd-timeline" class="cd-container">
+		<% let years = {}; %>
   <%
     site.posts.each(post => {
       const y = post.date.year();
@@ -17,6 +18,7 @@
   <% for (let year of Object.keys(years).reverse()) { %>
     <%- partial('_partial/archive', { year: year, posts: years[year].reverse() }) %>
   <% } %>
+	</section> <!-- cd-timeline -->
 </main>
 
 <script>
@@ -25,4 +27,22 @@
     $('#article-banner').geopattern(url);
     $('.header').removeClass('fixed-header');
   })();
+
+$(function(){
+	var $timeline_block = $('.cd-timeline-block');
+	//hide timeline blocks which are outside the viewport
+	$timeline_block.each(function(){
+		if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+			$(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+		}
+	});
+	//on scolling, show/animate timeline blocks when enter the viewport
+	$(window).on('scroll', function(){
+		$timeline_block.each(function(){
+			if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+				$(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+			}
+		});
+	});
+});
 </script>

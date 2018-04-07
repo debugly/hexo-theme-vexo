@@ -40,7 +40,7 @@ gitment_oauth_secret: 47471beab9dc3898e0310556a7b239db624fe919
 # uyan
 # if you want to use uyan as your blog comment, plz remove/comment out gitment config
 
-baidu_id: 
+# baidu_id: 
 
 # postnav
 postnav: true
