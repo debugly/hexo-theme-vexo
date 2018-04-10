@@ -25,7 +25,7 @@
         <%- truncate(strip_html(post.content), { length: 120, omission: ' ...' }) %>
       <% } %></p>
       <a href="<%= url_for(post.path) %>" class="cd-read-more">阅读更多</a>
-      <span class="cd-date"><%-date(post.date, "MM-DD")%></span>
+      <span class="cd-date"><%-date(post.date, "YYYY-MM-DD")%></span>
     </div> <!-- cd-timeline-content -->
   </div> <!-- cd-timeline-block -->
 <% }) %>
