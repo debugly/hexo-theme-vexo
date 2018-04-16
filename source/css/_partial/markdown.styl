@@ -7,12 +7,23 @@
       min-height: 13px
       margin: 2px 0
   p
-    line-height: 1.6em
+    line-height: 2em
+    font-size: 1.1rem
     code
       background-color: color-background
       color: color-orange
       padding: 3px 5px
       white-space: nowrap
+  ul
+    li
+      line-height: 2em
+      font-size: 1.1rem
+
+  h1,h2
+    @media m-mobile
+      text-align: center
+      //padding:0px 5px 8px 5px
+      //border-bottom:1px dashed #000
   h1
     font-size: 1.8em
   h2
@@ -36,8 +47,8 @@
     margin: .8em 0
   blockquote
     margin: 1em 0
-    padding: 5px 15px
-    border-left: 4px solid color-primary
+    padding: 0px 15px
+    border-left: 5px solid color-primary
     background: color-background
     border-bottom-right-radius: 2px
     border-top-right-radius: 2px

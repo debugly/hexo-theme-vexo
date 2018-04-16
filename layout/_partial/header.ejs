@@ -22,9 +22,14 @@
     </div>
     <div class="menu-mask">
       <ul class="menu-list">
+        <!-- <%= theme.menu[name] %>AAA
+          <%= path.slice(0,path.indexOf('/')) %>BBB
+          <%= theme.menu[name].indexOf(path.slice(0,path.indexOf('/'))) %> -->
         <% for(name in theme.menu) { %>
           <li class="menu-item">
             <% if (url_for(theme.menu[name]) == '/' + path.replace('/index.html', '') || (url_for(theme.menu[name]) == '/' && is_home())) { %>
+              <a href="<%- url_for(theme.menu[name]) %>" class="menu-link mobile-active"><%- name %></a>
+            <% } else if(-1 != theme.menu[name].indexOf(path.slice(0,path.indexOf('/')))){ %>
               <a href="<%- url_for(theme.menu[name]) %>" class="menu-link mobile-active"><%- name %></a>
             <% } else { %>
               <a href="<%- url_for(theme.menu[name]) %>" class="menu-link"><%- name %></a>
