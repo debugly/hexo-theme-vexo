@@ -17,4 +17,3 @@ cp -r ./* $localPath
 gitC add *
 gitC commit -m "$(date +'Theme updated:%Y-%m-%d %H:%M:%S')"
 gitC push origin master
-cls
