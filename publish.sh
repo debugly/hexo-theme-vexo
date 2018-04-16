@@ -5,7 +5,6 @@ alias gitC='git -C $localPath'
 
 if [[ ! -d $localPath ]];then
     mkdir $localPath
-    echo "clone to "$localPath
     git clone git@github.com:debugly/hexo-theme-yaris.git $localPath
 else
     echo "git pull .."
