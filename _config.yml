@@ -14,8 +14,9 @@ menu:
  
 
 # highlight
+#tomorrow https://highlightjs.org/  http://www.bootcdn.cn/highlight.js/
 highlight:
-  tomorrow
+  zenburn
 
 # catalog
 catalog: false

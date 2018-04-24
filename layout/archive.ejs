@@ -3,6 +3,7 @@
   
   <p class="post-date">归档文章(<%= site.posts.length %>)</p>
 </div>
+<div class="app-content">
 <main class="app-body" id="archives">
   <section id="cd-timeline" class="cd-container">
 		<% let years = {}; %>
@@ -20,7 +21,7 @@
   <% } %>
 	</section> <!-- cd-timeline -->
 </main>
-
+</div>
 <script>
   (function () {
     var url = '<%= config.url %>/<%= page.path %>';

@@ -12,6 +12,8 @@
     <a href="javascript:;"></a>
   </div>
 </div>
+
+<div class="app-content">
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
@@ -59,7 +61,7 @@
     <!-- 二维码 END -->
     <% if (theme.comment === 'gitment') { %>
       <!-- Gitment START -->
-      <div id="comments"></div>
+      <div id="gitment"></div>
       <!-- Gitment END -->
     <% } else if (theme.comment === 'uyan') { %>
       <!-- UY START -->
@@ -78,6 +80,7 @@
   <% } %>
   <!-- Catalog END -->
 </main>
+</div>
 
 <script>
   (function () {
@@ -157,7 +160,7 @@
           }
         }
       })
-      gitment.render(document.getElementById('comments'))
+      gitment.render(document.getElementById('gitment'))
     }
   })();
 </script>

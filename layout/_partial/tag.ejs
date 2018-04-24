@@ -1,6 +1,7 @@
-<span><i class="fa fa-tags"></i> Tags:</span>
-<% tags.each(function(tag) { %>
+<span><i class="fa fa-tags"></i></span>
+<% tags.each(function(tag,idx) { %>
   <a href="<%- url_for(config.root + config.tag_dir) %>#<%= tag.name %>" >
-    <span class="tag-code"><%= tag.name %></span>
+    <span class="tag-code"><%= tag.name %><% if (tags.length > 1 && idx < tags.length-1){ %>,<% } %>
+    </span>
   </a>
 <% }) %>

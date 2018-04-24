@@ -26,6 +26,9 @@
       //border-bottom:1px dashed #000
   h1
     font-size: 1.8em
+    padding-bottom: 7px;
+    border-bottom: 1px solid color-border
+    line-height: 2em;
   h2
     font-size: 1.5em
   h3
@@ -47,11 +50,11 @@
     margin: .8em 0
   blockquote
     margin: 1em 0
-    padding: 0px 15px
+    padding: 5px 15px
     border-left: 5px solid color-primary
-    background: color-background
-    border-bottom-right-radius: 2px
-    border-top-right-radius: 2px
+    border-bottom-right-radius: 5px
+    border-top-right-radius: 5px
+    background-color: color-border
   ul, ol
     overflow: auto
     margin: 15px 0
@@ -66,7 +69,7 @@
     border: 1px solid color-border
 
   figure
-    background: color-background
+    background: color-border
     padding: 0 10px
     border-radius: 2px
     margin: 20px 0
@@ -77,7 +80,7 @@
       position: absolute
       top: 0
       right: 0
-      color: #ccc
+      color: color-primary
       text-align: right
       font-size: 0.7em
       padding: 5px 10px 0
@@ -86,22 +89,24 @@
       font-weight: 500
   > table
     width: 100%
+    border: 1px solid color-border
+    border-collapse collapse;
     thead
       background-color: color-primary
-      border-top-width: 1px
-      border-top-style: solid
-      border-top-color: color-border
       th
-        padding: 5px 10px
+        padding: 12px
         color: color-white
+        border-right: 1px solid color-th-sep-color
+
     tbody
       tr
         &:nth-child(even)
           background: color-tr-bg
         &:nth-child(odd)
-          background: color-white
+          background: color-tr-bg-odd
         td
-          padding: 5px 10px
+          padding: 10px
+          border-right: 1px solid color-td-sep-color
   hr
     border: none
     border-bottom: 1px dashed color-border

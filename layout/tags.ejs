@@ -2,6 +2,7 @@
   <h2>Tags</h2>
   <p class="post-date">标签检索(<%= site.tags.length %>)</p>
 </div>
+<div class="app-content">
 <main class="app-body">
   <div id="tag-cloud">
     <% site.tags.sort('name').forEach(function(tag, index) { %>
@@ -21,7 +22,7 @@
     </div>
     <% }) %>
 </main>
-
+</div>
 <script>
   (function () {
     var url = '<%= config.url %>/<%= page.path %>'
