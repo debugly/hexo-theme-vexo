@@ -1,10 +1,11 @@
+<% if (toc(page.content) !== ""){ %>
 <aside class="catalog-container">
+  <div class="toc-indicator">
+    <label for="asideToggle" id="asideToggleLabel"><</label>
+  </div>
   <div class="toc-main">
-    <strong class="toc-title">Catalog</strong>
-    <% if (toc(page.content) !== ""){ %>
-      <%- toc(page.content, { "class": "toc-nav", "list_number": false }) %>
-    <% } else { %>
-      <ol class="nav"><%= __('none') %></ol>
-    <% } %>
+    <strong class="toc-title">目录</strong>
+    <%- toc(page.content, { "class": "toc-nav", "list_number": true }) %>
   </div>
 </aside>
+<% } %>

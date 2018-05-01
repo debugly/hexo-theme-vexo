@@ -19,7 +19,7 @@ highlight:
   zenburn
 
 # catalog
-catalog: false
+catalog: true
 
 # donate
 donate: true
