@@ -1,15 +1,17 @@
-<div id="about-banner" style="background-image: url(<%- theme.about.banner %>)"></div>
-
-<div class="author-content">
-  <div class="head">
-    <img src="<%- theme.about.avatar %>" />
-  </div>
-  <h3><%- config.author %></h3>
-  <p class="discription"><%- theme.about.description %></p>
-  <div class="detail markdown-content">
+<div class="app-content">
+  <div id="about-banner" style="background-image: url(<%- theme.about.banner %>)"></div>
+  <div class="app-body author-content">
+    <div class="head">
+      <img src="<%- theme.about.avatar %>" />
+    </div>
+    <h3><%- config.author %></h3>
+    <p class="discription"><%- theme.about.description %></p>
+    <div class="detail markdown-content">
       <%- page.content %>
+    </div>
   </div>
 </div>
+
 
 <script>
   (function () {
