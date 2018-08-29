@@ -11,6 +11,10 @@ else
     gitC pull origin master
 fi
 
+cp=$PWD
+cd $localPath
+git rm -r *
+cd $cp
 cp -r ./* $localPath
 
 gitC add *
