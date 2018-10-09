@@ -74,6 +74,10 @@ tags:
 Add this to the top of your article markdown file. 
 
 ## Change Log  
+
+**2018-10-09**
+* Use cdnjs.cloudflare.com/ajax/libs insted of cdn.bootcss.com
+
 **2017-09-21**
 * Added article catalog
 * Fixed bugs
