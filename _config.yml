@@ -10,8 +10,8 @@ menu:
  Tags: /tags/
  Projects: /project/
  About: /about/
- Zone: /zone/
- 
+ Zone: /mr-zone/
+
 
 # highlight
 #tomorrow https://highlightjs.org/  http://www.bootcdn.cn/highlight.js/
@@ -41,12 +41,12 @@ gitment_oauth_secret: 0c9fe417f7acc5d01b90186f949fee2faefffc30
 # uyan
 # if you want to use uyan as your blog comment, plz remove/comment out gitment config
 
-# baidu_id: 
+# baidu_id:
 
 # postnav
 postnav: true
 
-about: 
+about:
   banner: /css/images/about_bg.jpg
   avatar: /css/images/icon_about.jpg
   github_username: debugly
