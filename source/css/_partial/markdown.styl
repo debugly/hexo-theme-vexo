@@ -87,24 +87,23 @@
       font-weight: 500
   > table
     width: 100%
-    border: 1px solid color-border
+    border: 3px solid color-border
+    box-shadow: 2px 2px 5px #333333
     border-collapse collapse;
     thead
-      background-color: color-primary
       th
-        padding: 12px
+        padding: 15px
         color: color-white
         border-right: 1px solid color-th-sep-color
 
     tbody
+      overflow: scroll;
       tr
-        &:nth-child(even)
-          background: color-tr-bg
-        &:nth-child(odd)
-          background: color-tr-bg-odd
+        border-top: 1px solid color-border
         td
           padding: 10px
-          border-right: 1px solid color-td-sep-color
+          border-right: 1px solid color-border
+          line-height: 1.8
   hr
     border: none
     border-bottom: 1px dashed color-border

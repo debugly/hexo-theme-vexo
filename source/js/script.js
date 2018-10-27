@@ -64,9 +64,9 @@
     // 防抖动函数
     function debounce(func, wait, immediate) {
         var timeout;
-        return function() {
+        return function () {
             var context = this, args = arguments;
-            var later = function() {
+            var later = function () {
                 timeout = null;
                 if (!immediate) func.apply(context, args);
             };
@@ -77,7 +77,7 @@
         };
     };
 
-    var myEfficientFn = debounce(function() {
+    var myEfficientFn = debounce(function () {
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
         var headerH = header.height()
         if (banner) {
@@ -90,9 +90,11 @@
         if (scrollTop > 100) {
             top.addClass('opacity')
             var catalogs = $('aside.catalog-container')
-            if (catalogs){
+            if (catalogs) {
                 var catelog = catalogs[0];
-                catelog.style.paddingTop = (scrollTop-100)+'px';
+                if (catelog) {
+                    catelog.style.paddingTop = (scrollTop - 100) + 'px';
+                }
             }
         } else {
             top.removeClass('opacity')

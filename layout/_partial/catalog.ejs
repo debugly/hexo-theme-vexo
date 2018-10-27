@@ -1,15 +1,14 @@
 <% if (((page.toc == undefined) || (page.toc == true)) && toc(page.content) !== ""){ %>
 <aside class="catalog-container">
   <div class="toc-indicator">
-    <label for="asideToggle" id="asideToggleLabel"><</label>
-  </div>
-  <div class="toc-main">
-    <strong class="toc-title">目录</strong>
-    <% if (page.tocnum != undefined) { %>
-      <%- toc(page.content, { "class": "toc-nav", "list_number": page.tocnum }) %>
-    <% } else { %>
-      <%- toc(page.content, { "class": "toc-nav", "list_number": true }) %>
-    <% } %>
+    <label for="asideToggle" id="asideToggleLabel">
+      <</label> </div> <div class="toc-main">
+        <strong class="toc-title">目录</strong>
+        <% if (page.tocnum != undefined) { %>
+        <%- toc(page.content, { "class": "toc-nav", "list_number": page.tocnum }) %>
+        <% } else { %>
+        <%- toc(page.content, { "class": "toc-nav", "list_number": false }) %>
+        <% } %>
   </div>
 </aside>
 <% } %>
