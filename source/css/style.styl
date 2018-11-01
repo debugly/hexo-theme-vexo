@@ -76,7 +76,7 @@ pre
   opacity: 0
   transform: translateY(-20px)
   transition: all 0.4s
-  max-width: 980px
+  max-width: content-max-width
   @media m-mobile
     padding: 1.5em
 
@@ -203,6 +203,7 @@ h2.article-head
   max-width: 1080px
   .author
     color: color-primary
+
 .money-like
   padding: 2em 0 3em
   .reward-btn
@@ -223,43 +224,45 @@ h2.article-head
     background: linear-gradient(to bottom, #fccd60 0, #fbae12 100%, #2989d8 100%, #207cca 100%)
   .money-code
     position: absolute
-    top: -7em
-    left: 50%
+    top: -4em
+    left: -7em
     display: none
-    width: 10.5em
-    height: 5.5em
-    margin-left: -5.9em
+    width: 14em
+    height: 7em
+    margin-left: auto
+    margin-right: auto
     padding: 10px 15px
     background: color-white
     box-shadow: 0 0 0 1px color-border
     border-radius: 4px
+    overflow: hidden
+
     span
       display: inline-block
-      width: 4.5em
-      height: 4.5em
     .alipay-code
       float: left
       .code-image
         background-image: url(alipay-url)
         background-size: contain
         background-repeat: no-repeat
-        width: 4.5em
-        height: 4.5em
+        width: 6em
+        height: 6em
     .wechat-code
       float: right
       .code-image
         background-image: url(wechat-url)
         background-size: contain
         background-repeat: no-repeat
-        width: 4.5em
-        height: 4.5em
+        width: 6em
+        height: 6em
     b
       font-size: .5em
       line-height: 24px
       display: block
       margin: 0
+      padding-top: 3px
       text-align: center
-      color: color-dark
+      color: color-gray
 
 .notice
   font-size: 12px
@@ -274,9 +277,9 @@ h2.article-head
   text-align: center
   border-bottom: 1px dashed color-border
   canvas
-    width: 8em
-    height: 8em
-    padding: 5px
+    width: 10em
+    height: 10em
+    padding: 2px
     box-shadow: 0 0 1px color-shadow
 
 #uyan_frame
